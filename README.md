@@ -12,3 +12,7 @@ docker run --rm -v /docker/dockerize-java-app:/app -w /app --entrypoint "javac" 
 
 ## Running Java app
 docker run --rm -v /docker/dockerize-java-app:/app -w /app oracle/oracle-jdk:8 Main
+
+# Building Maven image
+
+$ docker build -f Dockerfile-mvn3 -t apache/mvn:3.3-jdk-8
