@@ -27,3 +27,7 @@ $ docker run -it --rm -v /docker/dockerize-java-app:/app -w /app apache/mvn:3.3-
 ## Building sample project using maven
 
 $ docker run --rm -v /docker/dockerize-java-app/app:/app -w /app apache/mvn:3.3-jdk-8 clean package
+
+## Running sample project using maven
+
+$ docker run --rm -v /docker/dockerize-java-app/app:/app -w /app apache/mvn:3.3-jdk-8 exec:java -Dexec.mainClass="com.ericsson.oss.App"
