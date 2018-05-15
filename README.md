@@ -16,3 +16,10 @@ docker run --rm -v /docker/dockerize-java-app:/app -w /app oracle/oracle-jdk:8 M
 # Building Maven image
 
 $ docker build -f Dockerfile-mvn3 -t apache/mvn:3.3-jdk-8
+
+## Creating sample project using quickstart artifact
+
+Sample application is built in interactive mode. Artifact requires following information to complete:
+GroupId, ArtifactId, version, and App name.
+
+$ docker run -it --rm -v /docker/dockerize-java-app:/app -w /app apache/mvn:3.3-jdk-8 archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.3
