@@ -23,3 +23,7 @@ Sample application is built in interactive mode. Artifact requires following inf
 GroupId, ArtifactId, version, and App name.
 
 $ docker run -it --rm -v /docker/dockerize-java-app:/app -w /app apache/mvn:3.3-jdk-8 archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.3
+
+## Building sample project using maven
+
+$ docker run --rm -v /docker/dockerize-java-app/app:/app -w /app apache/mvn:3.3-jdk-8 clean package
